@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import GalleryGrid from "../components/GalleryGrid";
+import { getItems } from "../components/getItems";
 
 export const metadata: Metadata = {
   title: "Gallery",
@@ -19,9 +20,10 @@ export default function Gallery() {
         </div>
       </section>
       <section className="mx-auto max-w-6xl px-5 py-16">
-        <Suspense><GalleryGrid /></Suspense>
+        <Suspense><GalleryGrid items={getItems()} /></Suspense>
         <p className="mt-12 text-center text-sm text-coffee/60">Stock changes often. Visit our warehouse to see and feel the full range.</p>
       </section>
+
     </>
   );
 }

@@ -2,10 +2,10 @@
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { items, categories } from "./products";
+import { categories, type Item } from "./products";
 import { business } from "./business";
 
-export default function GalleryGrid() {
+export default function GalleryGrid({ items }: { items: Item[] }) {
   const param = useSearchParams().get("cat");
   const initial = categories.find((c) => c.toLowerCase() === param?.toLowerCase()) ?? "All";
   const [cat, setCat] = useState(initial);

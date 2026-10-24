@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getCover } from "./components/getItems";
 
 const features = [
   { t: "Affordable", d: "Fair prices for tailors, cobblers and shoe makers — buy a little or in bulk." },
@@ -42,7 +43,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-5 py-20">
           <h2 className="text-center font-serif text-3xl text-coffee">What We Sell</h2>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {[["Leather", "/warehouse/p17.jpeg"], ["Shoe Soles", "/images/soles.jpg"], ["Shoe Lasts", "/images/lasts.jpg"], ["Shoe Laces", "/images/laces.jpg"]].map(([n, src]) => (
+            {[["Leather", "/warehouse/p17.jpeg"], ["Shoe Soles", getCover("Soles", "/images/soles.jpg")], ["Shoe Lasts", getCover("Lasts", "/images/lasts.jpg")], ["Shoe Laces", getCover("Laces", "/images/laces.jpg")]].map(([n, src]) => (
               <Link key={n} href={`/gallery?cat=${n.replace("Shoe ", "")}`} className="group overflow-hidden rounded-2xl bg-background shadow-sm hover:shadow-lg transition">
                 <div className="h-52 overflow-hidden"><img src={src} alt={n} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" /></div>
                 <p className="p-5 font-serif text-xl text-coffee">{n} &rarr;</p>
