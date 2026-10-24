@@ -2,9 +2,12 @@ import Link from "next/link";
 import { getCover } from "./components/getItems";
 
 const features = [
-  { t: "Affordable", d: "Fair prices for tailors, cobblers and shoe makers — buy a little or in bulk." },
-  { t: "Quality & Premium", d: "From everyday leather to premium hides, hand-picked for lasting finish." },
-  { t: "Complete Materials", d: "Leather, soles, laces and more — everything for your shoe in one place." },
+  { t: "Imported from Italy", d: "All our shoe materials are imported directly from Italy, so you get genuine quality at the source." },
+  { t: "Retail & Wholesale", d: "Buy a single piece or in bulk. We sell retail and wholesale at fair, affordable prices." },
+  { t: "Friendly, Helpful Staff", d: "Our team is happy to guide you to the right leather, sole, last or lace for your shoe." },
+  { t: "Waybill Delivery", d: "Can't make it to Lagos? We waybill your order to you, wherever you are." },
+  { t: "Trusted by Shoemakers Worldwide", d: "Shoemakers around the world rely on Patsusan for consistent, premium materials." },
+  { t: "Quality & Premium Range", d: "Leather, shoe soles, shoe lasts, shoe laces and more, all under one roof." },
 ];
 
 export default function Home() {
@@ -28,8 +31,8 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-6xl px-5 py-20">
-        <h2 className="text-center font-serif text-3xl text-coffee">Why Patsusan?</h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <h2 className="text-center font-serif text-3xl text-coffee">Why Shoemakers Choose Patsusan</h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {features.map((f) => (
             <div key={f.t} className="rounded-2xl border border-coffee/10 bg-cream p-8">
               <h3 className="font-serif text-xl text-coffee">{f.t}</h3>

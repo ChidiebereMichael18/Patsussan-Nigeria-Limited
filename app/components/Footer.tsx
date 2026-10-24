@@ -8,7 +8,7 @@ export default function Footer() {
         <div>
           <img src="/logo.png" alt="Patsusan logo" className="h-20 w-20 rounded-full object-cover" />
           <p className="mt-3 font-serif text-2xl text-white">{business.name}</p>
-          <p className="mt-3 text-sm">Affordable, quality and premium leathers and shoe materials in the heart of Lagos.</p>
+          <p className="mt-3 text-sm">Shoe materials imported directly from Italy. Retail and wholesale, with waybill delivery, in the heart of Lagos.</p>
         </div>
         <div className="text-sm space-y-2">
           <p className="font-semibold text-white">Explore</p>
