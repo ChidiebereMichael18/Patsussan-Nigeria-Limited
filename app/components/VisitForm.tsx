@@ -11,7 +11,7 @@ export default function VisitForm() {
 
   function submit(e: React.FormEvent) {
     e.preventDefault();
-    const text = `Hello Patsussan, I'd like to ${f.type.toLowerCase()}.\nName: ${f.name}\nPhone: ${f.phone}\nPreferred date: ${f.date} ${f.time}\nInterested in: ${f.msg}`;
+    const text = `Hello Patsusan, I'd like to ${f.type.toLowerCase()}.\nName: ${f.name}\nPhone: ${f.phone}\nPreferred date: ${f.date} ${f.time}\nInterested in: ${f.msg}`;
     window.open(`https://wa.me/${business.whatsapp}?text=${encodeURIComponent(text)}`, "_blank");
   }
 

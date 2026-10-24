@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-coffee-dark text-white/80">
       <div className="mx-auto max-w-6xl px-5 py-12 grid gap-8 md:grid-cols-3">
         <div>
-          <img src="/logo.png" alt="Patsussan logo" className="h-20 w-20 rounded-full object-cover" />
+          <img src="/logo.png" alt="Patsusan logo" className="h-20 w-20 rounded-full object-cover" />
           <p className="mt-3 font-serif text-2xl text-white">{business.name}</p>
           <p className="mt-3 text-sm">Affordable, quality and premium leathers and shoe materials in the heart of Lagos.</p>
         </div>

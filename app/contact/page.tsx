@@ -5,7 +5,7 @@ import { business } from "../components/business";
 
 export const metadata: Metadata = {
   title: "Visit Our Warehouse",
-  description: "Visit the Patsussan warehouse in Lagos to see and feel quality leather, soles, lasts and laces. Find our address, hours and contact details.",
+  description: "Visit the Patsusan warehouse in Lagos to see and feel quality leather, soles, lasts and laces. Find our address, hours and contact details.",
   alternates: { canonical: "/contact" },
 };
 
@@ -39,7 +39,7 @@ export default function Contact() {
             </ul>
           </div>
           <iframe title="Map" className="h-64 w-full rounded-2xl border-0"
-            src="https://www.google.com/maps?q=Lagos+Island,Lagos,Nigeria&output=embed" loading="lazy" />
+            src="https://www.google.com/maps?q=16+Wey+Street,Mushin,Lagos,Nigeria&output=embed" loading="lazy" />
         </div>
       </section>
     </>

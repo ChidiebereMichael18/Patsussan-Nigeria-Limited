@@ -27,7 +27,7 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-6xl px-5 py-20">
-        <h2 className="text-center font-serif text-3xl text-coffee">Why Patsussan?</h2>
+        <h2 className="text-center font-serif text-3xl text-coffee">Why Patsusan?</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {features.map((f) => (
             <div key={f.t} className="rounded-2xl border border-coffee/10 bg-cream p-8">

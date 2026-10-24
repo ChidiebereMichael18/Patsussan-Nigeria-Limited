@@ -14,20 +14,20 @@ const heading = Cormorant_Garamond({
 });
 
 const description =
-  "Patsussan Nigeria Limited sells affordable, quality and premium leather, shoe soles, shoe lasts, shoe laces and shoe materials in Lagos, Nigeria. Visit our warehouse.";
+  "Patsusan Nigeria Limited sells affordable, quality and premium leather, shoe soles, shoe lasts, shoe laces and shoe materials in Lagos, Nigeria. Visit our warehouse.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Patsussan Nigeria Limited | Leather & Shoe Materials in Lagos",
-    template: "%s | Patsussan Nigeria Limited",
+    default: "Patsusan Nigeria Limited | Leather & Shoe Materials in Lagos",
+    template: "%s | Patsusan Nigeria Limited",
   },
   description,
   applicationName: business.name,
   keywords: [
     "leather in Lagos", "buy leather Lagos", "shoe materials Nigeria", "shoe soles Lagos",
     "shoe lasts Nigeria", "shoe laces", "animal skins", "leather warehouse Lagos",
-    "Patsussan", "Patsussan Nigeria Limited", "shoe making materials",
+    "Patsusan", "Patsusan Nigeria Limited", "shoe making materials",
   ],
   alternates: { canonical: "/" },
   openGraph: {
@@ -35,13 +35,13 @@ export const metadata: Metadata = {
     locale: "en_NG",
     url: "/",
     siteName: business.name,
-    title: "Patsussan Nigeria Limited | Leather & Shoe Materials in Lagos",
+    title: "Patsusan Nigeria Limited | Leather & Shoe Materials in Lagos",
     description,
-    images: [{ url: "/logo.png", width: 1024, height: 1024, alt: "Patsussan logo" }],
+    images: [{ url: "/logo.png", width: 1024, height: 1024, alt: "Patsusan logo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Patsussan Nigeria Limited",
+    title: "Patsusan Nigeria Limited",
     description,
     images: ["/logo.png"],
   },
@@ -61,7 +61,7 @@ const jsonLd = {
   image: `${siteUrl}/logo.png`,
   telephone: business.phone,
   email: business.email,
-  address: { "@type": "PostalAddress", streetAddress: business.address, addressLocality: "Lagos", addressCountry: "NG" },
+  address: { "@type": "PostalAddress", streetAddress: "16 Wey Street, Mushin", addressLocality: "Lagos", addressCountry: "NG" },
   areaServed: "Nigeria",
   openingHours: ["Mo-Fr 08:00-18:00", "Sa 09:00-16:00"],
   priceRange: "$$",

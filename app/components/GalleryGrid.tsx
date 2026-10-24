@@ -45,7 +45,7 @@ export default function GalleryGrid() {
             <p className="mt-3 font-serif text-xl text-white">{current.title}</p>
             {current.sample && <p className="text-xs text-white/60">Sample image. Visit our warehouse to see the real stock.</p>}
             <div className="mt-4 flex flex-wrap justify-center gap-3">
-              <a href={`https://wa.me/${business.whatsapp}?text=${encodeURIComponent(`Hello Patsussan, I am interested in: ${current.title} (${current.category}). Please send me more details.`)}`}
+              <a href={`https://wa.me/${business.whatsapp}?text=${encodeURIComponent(`Hello Patsusan, I am interested in: ${current.title} (${current.category}). Please send me more details.`)}`}
                 target="_blank" rel="noopener" className="rounded-full bg-background px-6 py-2 text-sm font-semibold text-coffee hover:bg-cream">
                 Send us a message
               </a>
