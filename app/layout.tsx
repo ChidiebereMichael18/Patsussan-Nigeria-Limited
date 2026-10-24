@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Patsussan Nigeria Limited",
-  description: "",
+  description: "The Home of quality and premium Leathers and Shoe Materials in Nigeria",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
