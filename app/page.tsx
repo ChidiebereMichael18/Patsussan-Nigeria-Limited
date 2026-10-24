@@ -1,69 +1,75 @@
-import Image from "next/image";
+import Link from "next/link";
+
+const features = [
+  { t: "Affordable", d: "Fair prices for tailors, cobblers and shoe makers — buy a little or in bulk." },
+  { t: "Quality & Premium", d: "From everyday leather to premium hides, hand-picked for lasting finish." },
+  { t: "Complete Materials", d: "Leather, soles, laces and more — everything for your shoe in one place." },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <>
+      <section className="relative bg-coffee-dark bg-cover bg-center text-white" style={{ backgroundImage: "url(/images/hero-leather.jpg)" }}>
+        <div className="absolute inset-0 bg-coffee-dark/60" />
+        <div className="relative mx-auto max-w-6xl px-5 py-28 md:py-40 text-center">
+          <p className="text-sm uppercase tracking-[0.3em] text-white/70">Lagos, Nigeria</p>
+          <h1 className="mt-4 font-serif text-4xl md:text-6xl font-bold leading-tight">
+            The Home of Quality &amp; Premium<br />Leather and Shoe Materials
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-white/80">
+            Leather, shoe soles, shoe lasts, shoe laces and more — affordable and premium, in the heart of Lagos.
           </p>
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <Link href="/contact#visit" className="rounded-full bg-background px-8 py-3 font-semibold text-coffee hover:bg-cream">Visit Our Warehouse</Link>
+            <Link href="/gallery" className="rounded-full border border-white/60 px-8 py-3 font-semibold hover:bg-background/10">View Gallery</Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-5 py-20">
+        <h2 className="text-center font-serif text-3xl text-coffee">Why Patsussan?</h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {features.map((f) => (
+            <div key={f.t} className="rounded-2xl border border-coffee/10 bg-cream p-8">
+              <h3 className="font-serif text-xl text-coffee">{f.t}</h3>
+              <p className="mt-3 text-coffee/75">{f.d}</p>
+            </div>
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="bg-cream">
+        <div className="mx-auto max-w-6xl px-5 py-20">
+          <h2 className="text-center font-serif text-3xl text-coffee">What We Sell</h2>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[["Leather", "/warehouse/p17.jpeg"], ["Shoe Soles", "/images/soles.jpg"], ["Shoe Lasts", "/images/lasts.jpg"], ["Shoe Laces", "/images/laces.jpg"]].map(([n, src]) => (
+              <Link key={n} href={`/gallery?cat=${n.replace("Shoe ", "")}`} className="group overflow-hidden rounded-2xl bg-background shadow-sm hover:shadow-lg transition">
+                <div className="h-52 overflow-hidden"><img src={src} alt={n} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" /></div>
+                <p className="p-5 font-serif text-xl text-coffee">{n} &rarr;</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-5 py-20 grid items-center gap-10 md:grid-cols-2">
+        <div className="grid grid-cols-2 gap-4">
+          <img src="/warehouse/p19.jpeg" alt="Our warehouse" className="col-span-2 h-56 w-full rounded-2xl object-cover" />
+          <img src="/warehouse/p12.jpeg" alt="Inspecting leather" className="h-40 w-full rounded-2xl object-cover" />
+          <img src="/warehouse/p17.jpeg" alt="Leather hides" className="h-40 w-full rounded-2xl object-cover" />
+        </div>
+        <div>
+          <p className="text-sm uppercase tracking-[0.3em] text-coffee-mid">Our Warehouse</p>
+          <h2 className="mt-3 font-serif text-3xl md:text-4xl text-coffee">Visit our warehouse and you might just find what you like</h2>
+          <p className="mt-4 text-coffee/75">
+            Shelves of leather, soles, lasts, laces and more under one roof. Touch, compare and choose — our team will help you find the right material for your next pair.
+          </p>
+          <Link href="/contact#visit" className="mt-8 inline-block rounded-full bg-coffee px-8 py-3 font-semibold text-white hover:bg-coffee-dark">
+            Plan Your Visit
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }
+

@@ -1,26 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fdf6f0;
+  --foreground: #2b1810;
+  --coffee: #3e2415;
+  --coffee-dark: #26140b;
+  --coffee-mid: #6b4026;
+  --cream: #f2e6d9;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-coffee: var(--coffee);
+  --color-coffee-dark: var(--coffee-dark);
+  --color-coffee-mid: var(--coffee-mid);
+  --color-cream: var(--cream);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-heading);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3 { letter-spacing: 0.01em; }\n\n.leather-grain {
+  background-image:
+    radial-gradient(rgba(255,255,255,.07) 1px, transparent 1px),
+    radial-gradient(rgba(0,0,0,.18) 1px, transparent 1px);
+  background-size: 6px 6px, 9px 9px;
+  background-position: 0 0, 3px 3px;
 }
