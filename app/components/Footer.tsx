@@ -19,7 +19,8 @@ export default function Footer() {
         <div className="text-sm space-y-2">
           <p className="font-semibold text-white">Visit Us</p>
           <p>{business.address}</p>
-          <p>{business.phone}</p>
+          <p>Call: {business.phone}</p>
+          <p>WhatsApp: {business.whatsappDisplay}</p>
           <p>{business.email}</p>
         </div>
       </div>

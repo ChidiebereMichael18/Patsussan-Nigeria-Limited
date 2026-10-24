@@ -26,7 +26,8 @@ export default function Contact() {
           <div className="rounded-2xl bg-cream p-8">
             <h3 className="font-serif text-2xl text-coffee">Find Our Warehouse</h3>
             <p className="mt-3 text-coffee/80">{business.address}</p>
-            <p className="mt-1 text-coffee/80">📞 <a href={`tel:${business.phone}`} className="underline">{business.phone}</a></p>
+            <p className="mt-1 text-coffee/80">📞 Call: <a href={`tel:${business.phone.replace(/\s+/g, "")}`} className="underline">{business.phone}</a></p>
+            <p className="mt-1 text-coffee/80">💬 WhatsApp: <a href={`https://wa.me/${business.whatsapp}`} target="_blank" rel="noopener" className="underline">{business.whatsappDisplay}</a></p>
             <p className="mt-1 text-coffee/80">✉️ <a href={`mailto:${business.email}`} className="underline">{business.email}</a></p>
             <a href={`https://wa.me/${business.whatsapp}`} target="_blank" className="mt-5 inline-block rounded-full bg-coffee px-6 py-2 text-sm font-semibold text-white hover:bg-coffee-dark">Chat on WhatsApp</a>
           </div>

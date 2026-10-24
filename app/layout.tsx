@@ -63,7 +63,7 @@ const jsonLd = {
   email: business.email,
   address: { "@type": "PostalAddress", streetAddress: "16 Wey Street, Mushin", addressLocality: "Lagos", addressCountry: "NG" },
   areaServed: "Nigeria",
-  openingHours: ["Mo-Fr 08:00-18:00", "Sa 09:00-16:00"],
+  openingHours: ["Mo-Sa 08:00-18:00"],
   priceRange: "$$",
 };
 
