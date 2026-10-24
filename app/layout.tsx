@@ -14,7 +14,7 @@ const heading = Cormorant_Garamond({
 });
 
 const description =
-  "Patsusan Nigeria Limited sells shoe materials imported directly from Italy: leather, shoe soles, shoe lasts and shoe laces, retail and wholesale, in Lagos, Nigeria. Friendly staff, waybill delivery, trusted by shoemakers worldwide.";
+  "Buy quality leather, shoe soles, shoe lasts, laces and shoe materials in Lagos.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -37,13 +37,11 @@ export const metadata: Metadata = {
     siteName: business.name,
     title: "Patsusan Nigeria Limited | Leather & Shoe Materials in Lagos",
     description,
-    images: [{ url: "/logo.png", width: 1024, height: 1024, alt: "Patsusan logo" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Patsusan Nigeria Limited",
     description,
-    images: ["/logo.png"],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
   category: "shopping",

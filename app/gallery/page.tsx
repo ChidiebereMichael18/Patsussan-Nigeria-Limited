@@ -5,7 +5,7 @@ import { getItems } from "../components/getItems";
 
 export const metadata: Metadata = {
   title: "Gallery",
-  description: "Photos of our leather, shoe soles, shoe lasts, shoe laces and warehouse in Lagos, Nigeria.",
+  description: "Buy quality leather, shoe soles, shoe lasts and laces in Lagos.",
   alternates: { canonical: "/gallery" },
 };
 

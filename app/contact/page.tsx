@@ -5,7 +5,7 @@ import { business } from "../components/business";
 
 export const metadata: Metadata = {
   title: "Visit Our Warehouse",
-  description: "Visit the Patsusan warehouse in Lagos to see and feel quality leather, soles, lasts and laces. Find our address, hours and contact details.",
+  description: "Visit our warehouse at 16 Wey Street, Mushin, Lagos for quality leather and shoe materials.",
   alternates: { canonical: "/contact" },
 };
 

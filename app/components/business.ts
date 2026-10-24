@@ -1,5 +1,10 @@
-// TODO: set to the real domain
-export const siteUrl = "https://patsusannigerialimited.com";
+export const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "https://patsusannigerialimited.com");
 
 export const business = {
   name: "Patsusan Nigeria Limited",
