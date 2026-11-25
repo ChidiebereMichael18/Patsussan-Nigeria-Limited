@@ -16,7 +16,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-coffee/10">
       <div className="mx-auto max-w-6xl px-5 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3" aria-label="Patsusan home">
-          <img src="/logo.png" alt="Patsusan logo" width={48} height={48} className="h-12 w-12 object-contain" />
+          <img src="/logo.jpg" alt="Patsusan logo" width={48} height={48} className="h-12 w-12 object-contain" />
           <span className="font-serif text-2xl font-bold tracking-[0.2em] text-coffee">PATSUSAN</span>
         </Link>
         <nav className="hidden md:flex items-center gap-8">

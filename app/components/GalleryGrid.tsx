@@ -23,7 +23,7 @@ export default function GalleryGrid({ items }: { items: Item[] }) {
           </button>
         ))}
       </div>
-      <div className="columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5">
+      <div className="columns-1 gap-4 sm:columns-2 lg:columns-3 xl:columns-4 [&>*]:mb-4">
         {shown.map((p, i) => (
           <button key={p.src} onClick={() => setOpen(i)}
             className="group relative block w-full overflow-hidden rounded-2xl border border-coffee/10 text-left shadow-sm hover:shadow-lg transition">

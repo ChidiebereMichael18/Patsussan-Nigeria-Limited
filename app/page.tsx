@@ -7,7 +7,7 @@ const features = [
   { t: "Friendly, Helpful Staff", d: "Our team is happy to guide you to the right leather, sole, last or lace for your shoe." },
   { t: "Waybill Delivery", d: "Can't make it to Lagos? We waybill your order to you, wherever you are." },
   { t: "Trusted by Shoemakers Worldwide", d: "Shoemakers around the world rely on Patsusan for consistent, premium materials." },
-  { t: "Quality & Premium Range", d: "Leather, shoe soles, shoe lasts, shoe laces and more, all under one roof." },
+  { t: "Quality & Premium Range", d: "Leather, shoe soles, shoe lasts, suede and more, all under one roof." },
 ];
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
             The Home of Quality &amp; Premium<br />Leather and Shoe Materials
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-white/80">
-            Leather, shoe soles, shoe lasts, shoe laces and more — affordable and premium, in the heart of Lagos.
+            Leather, shoe soles, shoe lasts, suede and more — affordable and premium, in the heart of Lagos.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link href="/contact#visit" className="rounded-full bg-background px-8 py-3 font-semibold text-coffee hover:bg-cream">Visit Our Warehouse</Link>
@@ -46,7 +46,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-5 py-20">
           <h2 className="text-center font-serif text-3xl text-coffee">What We Sell</h2>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {[["Leather", "/warehouse/p17.jpeg"], ["Shoe Soles", getCover("Soles", "/images/soles.jpg")], ["Shoe Lasts", getCover("Lasts", "/images/lasts.jpg")], ["Shoe Laces", getCover("Laces", "/images/laces.jpg")]].map(([n, src]) => (
+            {[["Leather", getCover("Leather", "/warehouse/p17.jpeg")], ["Shoe Soles", getCover("Soles", "/images/soles.jpg")], ["Shoe Lasts", getCover("Lasts", "/images/lasts.jpg")], ["Suede", getCover("Suede", "/warehouse/p01.jpeg")]].map(([n, src]) => (
               <Link key={n} href={`/gallery?cat=${n.replace("Shoe ", "")}`} className="group overflow-hidden rounded-2xl bg-background shadow-sm hover:shadow-lg transition">
                 <div className="h-52 overflow-hidden"><img src={src} alt={n} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" /></div>
                 <p className="p-5 font-serif text-xl text-coffee">{n} &rarr;</p>
@@ -66,7 +66,7 @@ export default function Home() {
           <p className="text-sm uppercase tracking-[0.3em] text-coffee-mid">Our Warehouse</p>
           <h2 className="mt-3 font-serif text-3xl md:text-4xl text-coffee">Visit our warehouse and you might just find what you like</h2>
           <p className="mt-4 text-coffee/75">
-            Shelves of leather, soles, lasts, laces and more under one roof. Touch, compare and choose — our team will help you find the right material for your next pair.
+            Shelves of leather, soles, lasts, suede and more under one roof. Touch, compare and choose — our team will help you find the right material for your next pair.
           </p>
           <Link href="/contact#visit" className="mt-8 inline-block rounded-full bg-coffee px-8 py-3 font-semibold text-white hover:bg-coffee-dark">
             Plan Your Visit

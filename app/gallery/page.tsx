@@ -16,7 +16,7 @@ export default function Gallery() {
         <div className="absolute inset-0 bg-coffee-dark/60" />
         <div className="relative">
           <h1 className="font-serif text-4xl md:text-5xl">Our Gallery</h1>
-          <p className="mt-3 text-white/80">Leather, soles, lasts, laces and our warehouse. Tap a photo to enlarge.</p>
+          <p className="mt-3 text-white/80">Leather, suede, soles, lasts, laces and our warehouse. Tap a photo to enlarge.</p>
         </div>
       </section>
       <section className="mx-auto max-w-6xl px-5 py-16">

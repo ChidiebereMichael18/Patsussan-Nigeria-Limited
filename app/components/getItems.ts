@@ -3,6 +3,8 @@ import path from "node:path";
 import { items as base, type Item } from "./products";
 
 const cats = [
+  ["leathers", "Leather", "Leather"],
+  ["suede", "Suede", "Suede"],
   ["soles", "Soles", "Shoe soles"],
   ["lasts", "Lasts", "Shoe lasts"],
   ["laces", "Laces", "Shoe laces"],
@@ -22,8 +24,9 @@ export function getItems(): Item[] {
       real.push({ src: `/products/${folder}/${encodeURIComponent(f)}`, category, title: `${title} ${i + 1}` })
     );
   }
-  // keep AI samples only for categories with no real photos yet
-  const kept = base.filter((b) => !(b.sample && hasReal.has(b.category)));
+  // keep AI samples only for categories with no real photos yet;
+  // also drop non-sample base items for categories now served from the products folders
+  const kept = base.filter((b) => !(hasReal.has(b.category) && (b.sample || b.category === "Leather" || b.category === "Suede")));
   const idx = kept.findIndex((k) => k.category === "Warehouse");
   return [...kept.slice(0, idx), ...real, ...kept.slice(idx)];
 }

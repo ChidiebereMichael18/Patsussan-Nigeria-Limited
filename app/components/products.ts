@@ -17,6 +17,7 @@ export const items: Item[] = [
   { src: "/images/soles.jpg", category: "Soles", title: "Rubber and leather soles", sample: true },
   { src: "/images/lasts.jpg", category: "Lasts", title: "Shoe lasts", sample: true },
   { src: "/images/laces.jpg", category: "Laces", title: "Shoe laces", sample: true },
+  { src: "/images/laces.jpg", category: "Suede", title: "Suede material", sample: true },
   real("19", "Warehouse", "Our warehouse aisle"),
   real("12", "Warehouse", "Shelves of soles and lasts"),
   real("08", "Warehouse", "The leather room"),
@@ -26,4 +27,4 @@ export const items: Item[] = [
   real("06", "Warehouse", "Leather heaps on the floor"),
 ];
 
-export const categories = ["All", "Leather", "Soles", "Lasts", "Laces", "Warehouse"];
+export const categories = ["All", "Leather", "Suede", "Soles", "Lasts", "Laces", "Warehouse"];
