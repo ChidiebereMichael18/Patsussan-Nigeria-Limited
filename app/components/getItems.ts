@@ -17,7 +17,7 @@ export function getItems(): Item[] {
     const dir = path.join(process.cwd(), "public", "products", folder);
     let files: string[] = [];
     try {
-      files = fs.readdirSync(dir).filter((f) => /\.(jpe?g|png|webp)$/i.test(f)).sort();
+      files = fs.readdirSync(dir).filter((f) => /\.(jpe?g|png|webp)$/i.test(f)).sort().reverse();
     } catch {}
     if (files.length) hasReal.add(category);
     files.forEach((f, i) =>

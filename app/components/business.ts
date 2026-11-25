@@ -8,9 +8,9 @@ export const siteUrl =
 
 export const business = {
   name: "Patsusan Nigeria Limited",
-  phone: "0802 229 7172",
-  whatsapp: "2349083297594",
-  whatsappDisplay: "+234 908 329 7594",
+  phone: "+234 814 017 9451",
+  whatsapp: "2348140179451",
+  whatsappDisplay: "+234 814 017 9451",
   email: "info@patsusannigerialimited.com",
   address: "16 Wey Street, Mushin, Lagos, Nigeria",
   hours: [
